@@ -1,0 +1,25 @@
+body{
+    background:  url("../fond/fond-page.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: center;    
+}
+#logo-pokemon{
+    height: 150px;
+    width: 350px;
+}
+.imageCartePricipale{
+    height: 200px;
+    width: 200px;
+}
+.bgImageCartePricipale{
+    background:  url("../fond/fond-carte.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: center;   
+}
+.sizeCarte{
+    font-size: 8px;
+}
