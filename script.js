@@ -24,6 +24,7 @@ const pokemonGame = async () => {
     iconCartePricipale.innerHTML = randomPokemonAccueil.abilities[0].icon;
     descriptionCartePricipale.innerHTML = randomPokemonAccueil.abilities[0].description;
     cardPrincipal.style.background = randomPokemonAccueil.background_color;
+    let carteGagnee =  document.querySelector(`#carte1`);
 
     boutonLancer.onclick = () => {
         let randomPokemon;
@@ -42,9 +43,13 @@ const pokemonGame = async () => {
         let boutonStop = document.querySelector('.boutonStop');
         boutonStop.onclick = () => {
             clearInterval(defilementDesCartes);
-            // Le pokemon qui s'affiche après le bouton stop 
             pokemonsGagnes.push(randomPokemon);
             console.log(pokemonsGagnes);
+            carteGagnee.src= pokemons[0].image;
+            for( let i = 1; i <=pokemonsGagnes.length; i++){
+                let carteGagnee =  document.querySelector(`#carte${i + 1}`);
+                carteGagnee.src= pokemons[i].image;
+            };
         };
     };
 }
